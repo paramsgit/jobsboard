@@ -22,5 +22,4 @@ const fetchData=async ()=>{
     }, [])
 
     return {data,isLoading,error};
-    
 }
