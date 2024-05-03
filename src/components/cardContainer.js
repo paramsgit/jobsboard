@@ -7,7 +7,13 @@ const CardContainer = ({cardsArray,isLoading}) => {
 
   return (
     <div className='card_container_div'>
-      {cardsArray?.map((card)=>{
+
+      {
+        cardsArray.length==0
+        ?
+        <h1 className={`${isLoading && "opacity-0"}`}> No items Found </h1>
+        :
+      cardsArray?.map((card)=>{
         return <div key={`${card?.jdUid}${index++}`}><Card data={card}/></div>
       })}
       {isLoading && <CardLoader/>}
