@@ -11,16 +11,6 @@ const FilterBar = ({arr,setfilteredArray}) => {
     const [ExperienceSOption, setExperienceSOption] = useState(null);
     const [CompanySOption, setCompanySOption] = useState(null);
 
- 
-  const filters = {
-      roleOptions: ['frontend', 'backend'], // Example: ['frontend', 'backend']
-      techStack: ['React', 'Node.js'], // Example: ['React', 'Node.js']
-      remoteOrHybrid: 'remote', // Example: 'remote' or 'hybrid' or 'all'
-      location: 'chennai', // Example: 'chennai' or 'mumbai' or 'all'
-      experience: 3, // Example: 3 (years of experience)
-      minimumBaseSalary: 30, // Example: 50000 (minimum base salary)
-      companyName: 'all'
-  };
   
   useEffect(() => {
     console.log("calling to this",arr.length)
@@ -49,9 +39,9 @@ const FilterBar = ({arr,setfilteredArray}) => {
           return false;
       }
       
-      // if (filters.companyName !== 'all' && job.companyName !== filters.companyName) {
-      //     return false;
-      // }
+      if (CompanySOption  && job.companyName !== CompanySOption.value) {
+          return false;
+      }
       
       return true;
   });
