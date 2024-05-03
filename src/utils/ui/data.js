@@ -63,7 +63,7 @@ export const MinExperienceOptions = [
    
   ];
   export const CompanyOptions = [
-    { value: 'Apple', label: 'Apple' },
+    { value: 'Sony', label: 'Sony' },
     { value: 'Google', label: 'Google' },
     { value: 'Amazon', label: 'Amazon' },
     { value: 'Microsoft', label: 'Microsoft' },
@@ -74,6 +74,7 @@ export const MinExperienceOptions = [
     { value: 'Oracle', label: 'Oracle' },
     { value: 'Cisco', label: 'Cisco' },
     { value: 'HP', label: 'HP' },
+    { value: 'LG', label: 'LG' },
     { value: 'Dell', label: 'Dell' },
     { value: 'Sony', label: 'Sony' },
     { value: 'NVIDIA', label: 'NVIDIA' },
