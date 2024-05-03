@@ -28,7 +28,7 @@ const Container = () => {
     // Increment offset properly
     setisLoading(true)
     const newOffset = offset + 1;
-    const newOptions = { ...options, body: JSON.stringify({ limit: 2, offset: newOffset }) };
+    const newOptions = { ...options, body: JSON.stringify({ limit: 10, offset: newOffset }) };
 
     // Update state
     setOffset(newOffset);
