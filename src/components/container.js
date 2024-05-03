@@ -50,7 +50,9 @@ console.log("filtered arr",filteredArray)  }, [filteredArray])
       if ( scrollTop + clientHeight >= scrollHeight - 12) {
         console.log("Calling with", offset);
         setisLoading(true)
-        getData();
+        setTimeout(() => {
+          getData()
+        }, 500);
       }
     };
     if(!offset){ handleScroll()}
