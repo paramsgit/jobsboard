@@ -36,19 +36,13 @@ const Container = () => {
     const response = await fetch('https://api.weekday.technology/adhoc/getSampleJdJSON', newOptions);
     const data = await response.json();
     dispatch(UpdateCardsArray(data.jdList));
-    console.log(data);
     setisLoading(false)
   };
-
-  useEffect(() => {
-console.log("filtered arr",filteredArray)  }, [filteredArray])
-  
 
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
       if ( scrollTop + clientHeight >= scrollHeight - 12) {
-        console.log("Calling with", offset);
         setisLoading(true)
         setTimeout(() => {
           getData()

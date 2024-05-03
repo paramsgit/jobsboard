@@ -13,7 +13,6 @@ const FilterBar = ({arr,setfilteredArray}) => {
 
   
   useEffect(() => {
-    console.log("calling to this",arr.length)
     const filteredJobs = arr.filter(job => {
       // Apply filters one by one
       if (RoleSOptions.length && !RoleSOptions.includes(job.jobRole)) {
@@ -46,9 +45,7 @@ const FilterBar = ({arr,setfilteredArray}) => {
       return true;
   });
   
-  console.log(filteredJobs);
-  console.log(ExperienceSOption?.value,typeof(ExperienceSOption?.value));
-  
+ 
   setfilteredArray(filteredJobs)
   }, [arr,RoleSOptions,TechSOptions,SiteSOption,LocationSOption,ExperienceSOption,PaySOption,CompanySOption])
   
