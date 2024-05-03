@@ -39,7 +39,7 @@ const FilterBar = ({arr,setfilteredArray}) => {
           return false;
       }
       
-      if (CompanySOption  && job.companyName !== CompanySOption.value) {
+      if (CompanySOption && CompanySOption!=="all"  && job.companyName !== CompanySOption.value) {
           return false;
       }
       
@@ -50,7 +50,7 @@ const FilterBar = ({arr,setfilteredArray}) => {
   console.log(ExperienceSOption?.value,typeof(ExperienceSOption?.value));
   
   setfilteredArray(filteredJobs)
-  }, [arr,RoleSOptions,TechSOptions,SiteSOption,LocationSOption,ExperienceSOption,PaySOption])
+  }, [arr,RoleSOptions,TechSOptions,SiteSOption,LocationSOption,ExperienceSOption,PaySOption,CompanySOption])
   
   useEffect(() => {
    
