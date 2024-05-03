@@ -11,6 +11,7 @@ import { UpdateCardsArray } from '../utils/store/dataSlice'
 const Container = () => {
   const dispatch = useDispatch();
   const [offset, setOffset] = useState(0);
+  const [isLoading, setisLoading] = useState(false);
   const [filteredArray,setfilteredArray]=useState([])
     const cardsArray = useSelector(state => state?.data?.cardsArray);
    
@@ -25,6 +26,7 @@ const Container = () => {
 
   const getData = async () => {
     // Increment offset properly
+    setisLoading(true)
     const newOffset = offset + 1;
     const newOptions = { ...options, body: JSON.stringify({ limit: 2, offset: newOffset }) };
 
@@ -35,6 +37,7 @@ const Container = () => {
     const data = await response.json();
     dispatch(UpdateCardsArray(data.jdList));
     console.log(data);
+    setisLoading(false)
   };
 
   useEffect(() => {
@@ -44,8 +47,9 @@ console.log("filtered arr",filteredArray)  }, [filteredArray])
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-      if ( scrollTop + clientHeight >= scrollHeight - 2) {
+      if ( scrollTop + clientHeight >= scrollHeight - 12) {
         console.log("Calling with", offset);
+        setisLoading(true)
         getData();
       }
     };
@@ -61,9 +65,9 @@ console.log("filtered arr",filteredArray)  }, [filteredArray])
   
 
   return (
-    <div className='mt-8 md:mt-12 flex flex-col items-center'>
+    <div className='container'>
         <FilterBar arr={cardsArray} setfilteredArray={setfilteredArray}/>
-        <CardContainer cardsArray={filteredArray}/>
+        <CardContainer cardsArray={filteredArray} isLoading={isLoading}/>
         {/* <Card/> */}
     </div>
   )

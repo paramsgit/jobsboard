@@ -2,8 +2,8 @@ import React from 'react'
 
 const Card = ({data}) => {
   return (
-    <div className='my-3'>
-<div className='w-[20rem]'>
+    <div className='card_up'>
+<div className='card_width'>
 <div className="card_bg">
     {/* <div className=" posted_div"> <span className='posted_tag'><span className='hourglass'>⌛</span> Posted 11 days ago </span></div> */}
 
@@ -31,15 +31,16 @@ const Card = ({data}) => {
     </div>
     </div>
 
-    <div className={`${!data.minExp && "opacity-0"} text-gray-600 mt-2 flex flex-col text-sm`}>
+    <div className={`${!data.minExp && "opacity-0"} exp_div`}>
         Minimum Experience
-        <span className={`text-gray-800 ${!data.minExp && "opacity-0"}`}>{data.minExp} years</span>
+        <span className={`exp_txt ${!data.minExp && "opacity-0"}`}>{data.minExp} years</span>
     </div>
-    <div className="flex flex-col mt-2">
-        <button className="bg-[#55efc3] text-gray-900 px-4 py-2 m-1 rounded-md hover:bg-green-600">⚡️ Easy Apply</button>
-        <button className="flex justify-center items-center bg-[#4943da] text-white px-4 py-2 m-1 rounded-md hover:bg-purple-600">
-        <img className="w-6 h-6 blur-[1px] rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar" />
-        <img className="w-6 h-6 ml-2 mr-4 blur-[1px] rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Rounded avatar" />
+
+    <div className="card_buttons_div">
+        <button className="apply_btn">⚡️ Easy Apply</button>
+        <button className="ref_btn">
+        <img className="ref_img" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar" />
+        <img className="ref_img ref_img2" src="https://flowbite.com/docs/images/people/profile-picture-4.jpg" alt="Rounded avatar" />
 
             
             Unlock referral asks</button>

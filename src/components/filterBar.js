@@ -42,13 +42,12 @@ const FilterBar = ({arr,setfilteredArray}) => {
           return false;
       }
       
-      if (ExperienceSOption && job.experience && (job.experience)?.toString() < ExperienceSOption.value) {
+      if (ExperienceSOption && job.minExp && job.minExp < parseInt(ExperienceSOption.value)) {
           return false;
       }
-      
-      // if (filters.minimumBaseSalary && job.minJdSalary < filters.minimumBaseSalary) {
-      //     return false;
-      // }
+      if (PaySOption && job.minJdSalary < PaySOption.value) {
+          return false;
+      }
       
       // if (filters.companyName !== 'all' && job.companyName !== filters.companyName) {
       //     return false;
@@ -58,9 +57,10 @@ const FilterBar = ({arr,setfilteredArray}) => {
   });
   
   console.log(filteredJobs);
+  console.log(ExperienceSOption?.value,typeof(ExperienceSOption?.value));
   
   setfilteredArray(filteredJobs)
-  }, [arr,RoleSOptions,TechSOptions,SiteSOption,LocationSOption,ExperienceSOption])
+  }, [arr,RoleSOptions,TechSOptions,SiteSOption,LocationSOption,ExperienceSOption,PaySOption])
   
   useEffect(() => {
    
@@ -69,7 +69,7 @@ const FilterBar = ({arr,setfilteredArray}) => {
   
 
   return (
-    <div className='flex flex-wrap justify-evenly'>
+    <div className='filter_div'>
       
       <MultiSelectDropdown options={RoleOptions} selectedOptions={RoleSOptions} setSelectedOptions={setRoleSOptions} Name={"Role"}/>
       <MultiSelectDropdown options={TechStackOptions} selectedOptions={TechSOptions} setSelectedOptions={setTechSOptions} Name={"Tech Stack"}/>
