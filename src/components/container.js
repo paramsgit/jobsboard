@@ -3,10 +3,6 @@ import FilterBar from './filterBar'
 import CardContainer from './cardContainer'
 import { useDispatch,useSelector } from 'react-redux'
 import { UpdateCardsArray } from '../utils/store/dataSlice'
-// import { useApi } from '../utils/hooks/useApi'
-
-
-
 
 const Container = () => {
   const dispatch = useDispatch();
@@ -15,9 +11,6 @@ const Container = () => {
   const [filteredArray,setfilteredArray]=useState([])
   const cardsArray = useSelector(state => state?.data?.cardsArray);
    
-  
-
-
   const options = {
     method: "POST",
     body: JSON.stringify({ limit: 10, offset: offset }),
@@ -25,12 +18,10 @@ const Container = () => {
   };
 
   const getData = async () => {
-    // Increment offset properly
     setisLoading(true)
     const newOffset = offset + 1;
     const newOptions = { ...options, body: JSON.stringify({ limit: 10, offset: newOffset }) };
 
-    // Update state
     setOffset(newOffset);
 
     const response = await fetch('https://api.weekday.technology/adhoc/getSampleJdJSON', newOptions);
@@ -55,16 +46,13 @@ const Container = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [offset]); // Include offset in dependency array
+  }, [offset]); 
 
-
-  
 
   return (
     <div className='container'>
         <FilterBar arr={cardsArray} setfilteredArray={setfilteredArray}/>
         <CardContainer cardsArray={filteredArray} isLoading={isLoading}/>
-        {/* <Card/> */}
     </div>
   )
 }
