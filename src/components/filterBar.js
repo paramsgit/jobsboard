@@ -14,14 +14,13 @@ const FilterBar = ({arr,setfilteredArray}) => {
   
   useEffect(() => {
     const filteredJobs = arr.filter(job => {
-      // Apply filters one by one
+
       if (RoleSOptions.length && !RoleSOptions.includes(job.jobRole)) {
           return false;
       }
       if (TechSOptions.length && !TechSOptions.includes(job.jobRole)) {
           return false;
       }
-      
       
       if (SiteSOption && SiteSOption.value !== 'all' && job.location !== SiteSOption.value) {
           return false;
