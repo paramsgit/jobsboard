@@ -15,3 +15,100 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(177,177,177,0) 10
 .little-shadow{
   box-shadow: 1px 1px 3px #ebebeb;
 }
+
+
+/* Card */
+
+.card_bg{
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  border: 1px solid #f3f3f3;
+  box-shadow: 2px 2px 10px rgba(221, 221, 221, 0.816);
+}
+.hourglass{
+  font-size: 0.75rem;
+}
+.posted_div{
+  margin-bottom: 1rem;
+}
+.posted_tag{
+  padding: 0.35rem 0.75rem;
+
+  box-shadow: 1px 1px 10px rgba(221, 221, 221, 0.234);
+
+  color: rgb(177, 177, 177);
+  border: 1px solid rgb(239, 239, 239);
+  border-radius: 10rem;
+  font-size: 0.6rem;
+}
+
+.company_div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4;
+}
+.company_logo{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+.company_details{
+  padding: 0 0.25rem;
+}
+.company_name{
+  color: rgb(75 85 99);
+  font-size: 0.875rem;
+}
+.company_role{
+  color:  rgb(17 24 39 );
+  font-size: 0.875rem;
+}
+.company_loc{
+  color:  rgb(3 7 18);
+  font-size: 0.75rem;
+}
+
+.salary{
+  color: rgb(30 41 59);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.about_div{
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.about_p{
+  color:  rgb(55 65 81);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 0.875rem;
+  max-height: 180px;
+}
+.about_s{
+  font-weight: 500;
+  color: black;
+}
+.faded_div{
+  position: absolute;
+  height: 3rem;
+  margin-top: -3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 18rem;
+}
+.view_button{
+  color: rgb(59 130 246 );
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  margin-top: 3rem;
+}
+.min_exp_div{
+  color: rgb(75 85 99 );
+}

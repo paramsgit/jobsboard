@@ -1,6 +1,7 @@
 export const RoleOptions = [
   { value: 'frontend', label: 'Frontend' },
   { value: 'backend', label: 'Backend' },
+  { value: 'ios', label: 'IOS' },
   { value: 'fullStack', label: 'FullStack' },
   { value: 'data enginear', label: 'Data Enginear' },
   { value: 'tech lead', label: 'Tech Lead' },
@@ -23,12 +24,14 @@ export const TechStackOptions = [
 export const RemoteOptions = [
     { value: 'remote', label: 'Remote' },
     { value: 'hybrid', label: 'Hybrid' },
-    { value: 'in-office', label: 'In-Office' },
+    { value: 'all', label: 'All' },
    
   ];
 export const LocationOptions = [
+    { value: 'all', label: 'All' },
     { value: 'delhi ncr', label: 'Delhi NCR' },
     { value: 'noida', label: 'Noida' },
+    { value: 'mumbai', label: 'Mumbai' },
     { value: 'gurugram', label: 'Gurugram' },
     { value: 'Bangalore', label: 'bangalore' },
     { value: 'hydrabad', label: 'Hydrabad' },
