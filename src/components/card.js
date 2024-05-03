@@ -10,7 +10,7 @@ const Card = ({data}) => {
     <div className="company_div">
         <img src="https://medvirturials.com/img/old_logo.png" alt="Company Logo" className="company_logo" />
         <div className='company_details'>
-            {/* <h1 className='company_name'>Avalara</h1> */}
+            <h1 className={`company_name ${!data.companyName && "opacity-0"}`}>{data.companyName}</h1>
             <h1 className={`${!data.jobRole && "opacity-0"} company_role`}>{data.jobRole}</h1>
             <h1 className={`company_loc ${!data.location && "opacity-0"}`}>{data.location}</h1>
             
