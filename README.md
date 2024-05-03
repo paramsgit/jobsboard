@@ -3,6 +3,7 @@
 ## Description
 This is a basic React app with Redux that allows users to search for jobs from a given API. It displays job listings in cards with infinite scroll functionality. While loading the next set of data, skeleton loading is displayed. Users can filter jobs based on various parameters including role, tech stack, experience, salary, location, and remote/hybrid options.
 
+Checkout live: ```https://jobsboard-weekdays.netlify.app```
 ## Features
 - Fetches job listings from a provided API
 - Displays job listings in cards format
