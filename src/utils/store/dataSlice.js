@@ -7,11 +7,17 @@ const dataSlice = createSlice({
            
     },
     reducers: {
-        UpdateCardsArray: (state,action) => {
-            state.cardsArray = [...state.cardsArray, ...action.payload];;
-        },
-        
-       
+        UpdateCardsArray: (state, action) => {
+            // Iterate over each item in the payload
+            action.payload.forEach(item => {
+                // Check if the item is already present in cardsArray
+                const index = state.cardsArray.findIndex(card => card.jdUid === item.jdUid);
+                // If not present, add it to cardsArray
+                if (index === -1) {
+                    state.cardsArray.push(item);
+                }
+            });
+        },   
     },
 });
 
