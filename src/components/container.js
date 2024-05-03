@@ -13,7 +13,7 @@ const Container = () => {
   const [offset, setOffset] = useState(0);
   const [isLoading, setisLoading] = useState(false);
   const [filteredArray,setfilteredArray]=useState([])
-    const cardsArray = useSelector(state => state?.data?.cardsArray);
+  const cardsArray = useSelector(state => state?.data?.cardsArray);
    
   
 
