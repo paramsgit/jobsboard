@@ -39,7 +39,7 @@ const FilterBar = ({arr,setfilteredArray}) => {
           return false;
       }
       
-      if (CompanySOption && CompanySOption!=="all"  && job.companyName !== CompanySOption.value) {
+      if (CompanySOption && CompanySOption.value!=="all"  && job.companyName !== CompanySOption.value) {
           return false;
       }
       
