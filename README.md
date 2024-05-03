@@ -11,7 +11,7 @@ This is a basic React app with Redux that allows users to search for jobs from a
 - Skeleton loading of cards while fetching new data
 
 
-
+![ScreenShot](/public/sc2.png)
 
 ## Technologies Used
 - React
