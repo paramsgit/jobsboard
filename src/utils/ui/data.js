@@ -63,6 +63,7 @@ export const MinExperienceOptions = [
    
   ];
   export const CompanyOptions = [
+    { value: 'all', label: 'All' },
     { value: 'Sony', label: 'Sony' },
     { value: 'Google', label: 'Google' },
     { value: 'Amazon', label: 'Amazon' },
